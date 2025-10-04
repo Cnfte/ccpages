@@ -3,64 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>下线通知</title>
     <style>
-        /* 容器样式：限制宽度、居中显示，避免文字超出 */
-        .notice-container {
-            max-width: 600px; /* 固定最大宽度，适配不同屏幕 */
-            width: 100%;
-            margin: 50px auto; /* 上下留空，左右居中 */
-            padding: 20px 30px;
-            border: 1px solid #eee; /* 可选：加边框提升质感 */
-            border-radius: 8px; /* 可选：圆角优化视觉 */
-            box-sizing: border-box; /* 确保 padding 不撑大容器 */
+        /* 简单样式，确保按钮清晰可见（适配手机与电脑） */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
-        /* 标题样式：控制间距，突出层级 */
-        .notice-container h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
-            font-size: 24px;
-        }
-        .notice-container h2 {
-            color: #444;
-            margin: 18px 0;
+        .jump-tip {
             font-size: 18px;
-            line-height: 1.6; /* 行高优化，避免换行拥挤 */
+            margin-bottom: 30px;
+            color: #333;
+            text-align: center;
+            padding: 0 20px;
         }
-        /* 段落样式：控制行高、间距，确保文字易读 */
-        .notice-container p {
-            color: #666;
-            margin: 15px 0;
+        .jump-btn {
+            padding: 12px 36px;
             font-size: 16px;
-            line-height: 1.8;
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
-        /* 适配小屏幕（如手机），避免排版错乱 */
-        @media (max-width: 500px) {
-            .notice-container {
-                padding: 15px 20px;
-                margin: 20px auto;
-            }
-            .notice-container h1 {
-                font-size: 22px;
-            }
-            .notice-container h2 {
-                font-size: 16px;
-            }
-            .notice-container p {
-                font-size: 14px;
-            }
+        .jump-btn:hover {
+            background-color: #0055bb;
         }
     </style>
 </head>
 <body>
-    <div class="notice-container">
-        <h1>感谢你的陪伴</h1>
-        <h2>本服务因为被有心之人攻击从2025/10/3日起停止服务提供永久下线</h2>
-        <h2>从8/8开始一共有26435位机长找到了回家的路</h2>
-        <h2>感谢陪伴后会有期</h2>
-        <p>如有需要可以加我QQ来获取最新的回家的路</p>
-        <p>QQ:3893262114</p><q>服务时间：周六日早9:00-下午4:00<q>
-    </div>
+    <p class="jump-tip">本网站已经停用是否跳转到新的网站？(jmgx.cnfte.cfd)</p>
+    <button class="jump-btn" onclick="jumpToTarget()">确认跳转</button>
+
+    <script>
+        // 点击按钮后执行跳转逻辑
+        function jumpToTarget() {
+            const targetUrl = "https://jmgx.cnfte.cfd";
+            // 打开新窗口跳转（可选，也可改为 window.location.href 本窗口跳转）
+            window.open(targetUrl, "_blank");
+        }
+    </script>
 </body>
 </html>
